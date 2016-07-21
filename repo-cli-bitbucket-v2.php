@@ -15,8 +15,7 @@ $user_id = ( isset( $argv[1] ) ) ? $argv[1] : '';
 $user_secret = ( isset( $argv[2] ) ) ? $argv[2] : '';
 $team = ( isset( $argv[3] ) ) ? strtolower( $argv[3] ) : '';
 
-require_once 'vendor/autoload.php';
-require_once 'RepoSources.php';
+require_once 'Repobackup.php';
 $repoBackup = new RepoBackup();
 $bbSource = new BitbucketSourceV2();
 $bbSource->setCredentials( array( 'client_id' => $user_id, 'client_secret' => $user_secret, 'team' => $team ) );
